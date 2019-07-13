@@ -1,0 +1,13 @@
+form input {
+    border: 1px outset black;
+    padding: 20px;
+}
+
+.button {
+    padding: 20px;
+    color: white;
+    background: #3a4f4e;
+}
+.button:hover {
+    background: #445a59;
+}
