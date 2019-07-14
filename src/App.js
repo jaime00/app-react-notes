@@ -10,20 +10,36 @@ export default class App extends React.Component {
         notes: [
             {
                 id: 0,
-                content: "Note 1"
+                content: "note 1"
             },
             {
                 id: 1,
-                content: "Note 2"
-            },
-            {
-                id: 2,
-                content: "Note 3"
+                content: "note 2"
             }
         ]
     };
 
+    addNote = content => {
+        let newNote = {
+            id: [this.state.notes.length],
+            content: content
+        };
+
+        this.setState({
+            notes: [...this.state.notes, newNote]
+        });
+    };
+
+    removeNote = id => {
+        // console.log(id);
+        const newNotes = this.state.notes.filter(note => note.id !== id);
+        this.setState({
+            notes: newNotes
+        });
+    };
+
     render() {
+        // console.log(this.state);
         return (
             <div>
                 <div className="header">
@@ -31,11 +47,15 @@ export default class App extends React.Component {
                 </div>
                 <div className="body">
                     {this.state.notes.map(note => (
-                        <Note content={note.content} key={note.id} />
+                        <Note
+                            removeNote={this.removeNote}
+                            note={note}
+                            key={note.id}
+                        />
                     ))}
                 </div>
                 <div className="footer">
-                    <Form />
+                    <Form addNote={this.addNote} />
                 </div>
             </div>
         );
