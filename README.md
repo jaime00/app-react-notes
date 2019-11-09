@@ -1,7 +1,7 @@
 # app-react-notes
 This is a basic application using React library to add and delete notes in a Firebase database.
-
-![preview](https://lh3.googleusercontent.com/7szicnbulK5sahL01PySGktMj8jHvmLRJzH1ioa9PN-5pPCCgKIq7o8uufiZJmF8YnoXemktglXNFIK1X2_c=w1920-h902-rw 'preview')
+<br></br>
+<img src="https://user-images.githubusercontent.com/20992836/68535056-1a0f7b80-030a-11ea-9366-00f461b489be.PNG"/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
